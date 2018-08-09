@@ -2,7 +2,9 @@ package two.example.shen.yue.espressoprojectone;
 
 import android.Manifest;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +15,8 @@ import java.util.TimerTask;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 import two.example.shen.yue.espressoprojectone.activity.Activity1;
+import two.example.shen.yue.espressoprojectone.activity.Activity10;
+import two.example.shen.yue.espressoprojectone.activity.Activity13;
 import two.example.shen.yue.espressoprojectone.activity.Activity3;
 import two.example.shen.yue.espressoprojectone.activity.Activity4;
 import two.example.shen.yue.espressoprojectone.activity.Activity5;
@@ -42,7 +46,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Timer timer;
     private TimerTask task;
     private int index = 0;
-
 
 
     @Override
@@ -101,7 +104,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_main_btn1:
-                startActivity(Activity1.class);
+//                startActivity(Activity1.class);
+//                Activity1.sop(this);
+                test1();
                 break;
             case R.id.btn_main_btn2:
                 startActivity(Activity3.class);
@@ -122,14 +127,21 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(Activity7.class);
                 break;
             case R.id.btn_main_btn10:
+                startActivity(Activity10.class);
                 break;
             case R.id.btn_main_btn11:
+                startActivity(Activity13.class);
                 break;
             case R.id.btn_main_btn12:
+                errorTest();
                 break;
             default:
                 break;
         }
+    }
+
+    private void errorTest() {
+        int i = 10 / 0;
     }
 
     @Override
@@ -142,7 +154,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private void requestCodeQRCodePermissions() {
         String[] perms = {Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE};
         if (!EasyPermissions.hasPermissions(this, perms)) {
-            EasyPermissions.requestPermissions(this, "扫描二维码需要打开相机和散光灯的权限", REQUEST_CODE_QRCODE_PERMISSIONS, perms);
+            EasyPermissions.requestPermissions(this, "扫描二维码需要打开相机和散光灯的权限",
+                    REQUEST_CODE_QRCODE_PERMISSIONS, perms);
         }
     }
 
@@ -157,7 +170,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             @Override
             public void permissionOnDenied() {
             }
-        }, Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        }, Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE, android
+                .Manifest.permission.WRITE_EXTERNAL_STORAGE);
     }
 
     @Override
@@ -172,4 +186,26 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         Intent intent = new Intent(this, TestIntentService1.class);
         startService(intent);
     }
+
+    private void test1() {
+        startActivity(
+                new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+                        .setData(Uri.fromParts("package", getPackageName(), null)));
+    }
+
+
+//    @Override
+//    public void onClick(DialogInterface dialog, int which) {
+//        if (which == Dialog.BUTTON_POSITIVE) {
+//            startActivityForResult(
+//                    new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+//                            .setData(Uri.fromParts("package", getPackageName(), null)),
+//                    APP_SETTINGS_RC);
+//        } else if (which == Dialog.BUTTON_NEGATIVE) {
+//            setResult(Activity.RESULT_CANCELED);
+//            finish();
+//        } else {
+//            throw new IllegalStateException("Unknown button type: " + which);
+//        }
+//    }
 }

@@ -23,6 +23,7 @@ public class Activity5 extends BaseActivity {
 
     private String realm = "http://wxpay.wxutil.com";//十分重要的  是商户申请的域名
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +40,10 @@ public class Activity5 extends BaseActivity {
 
 
     private void setData(){
-        wv_activity5.loadUrl("http://wxpay.wxutil.com/mch/pay/h5.v2.php");
+
+        String fileUrl = "file:///android_asset/OpenApp.html";
+//        wv_activity5.loadUrl("http://wxpay.wxutil.com/mch/pay/h5.v2.php");
+        wv_activity5.loadUrl(fileUrl);
     }
 
 

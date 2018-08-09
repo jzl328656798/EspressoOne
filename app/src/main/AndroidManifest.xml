@@ -5,17 +5,16 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -29,15 +28,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.Activity1"/>
-        <activity android:name=".activity.Activity2"/>
-        <activity android:name=".activity.Activity3"/>
-        <activity android:name=".activity.Activity4"/>
-        <activity android:name=".activity.Activity5"/>
-        <activity android:name=".activity.Activity6"/>
-        <activity android:name=".activity.Activity7"/>
+        <activity android:name=".activity.Activity1" />
+        <activity android:name=".activity.Activity2" />
+        <activity android:name=".activity.Activity3" />
+        <activity android:name=".activity.Activity4" />
+        <activity android:name=".activity.Activity5" />
+        <activity android:name=".activity.Activity6" />
+        <activity android:name=".activity.Activity7" />
+        <activity android:name=".activity.Activity8" />
+        <activity android:name=".activity.Activity9" />
+        <activity android:name=".activity.Activity10" />
+        <activity android:name=".utils.CrashDialogActivity" />
 
-        <service android:name=".service.TestIntentService1"/>
+        <service android:name=".service.TestIntentService1" />
+
+        <activity
+            android:name=".activity.Activity11"
+            android:label="@string/title_activity_11"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.Activity12" />
+        <activity android:name=".activity.Activity13"></activity>
     </application>
 
 </manifest>

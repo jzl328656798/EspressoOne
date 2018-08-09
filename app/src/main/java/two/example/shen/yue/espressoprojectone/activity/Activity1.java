@@ -1,5 +1,7 @@
 package two.example.shen.yue.espressoprojectone.activity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.annotation.Nullable;
@@ -19,6 +21,11 @@ public class Activity1 extends BaseActivity implements QRCodeView.Delegate {
 
 
     private QRCodeView mQRCodeView;
+
+    public static void sop(Context mContext){
+        Intent intent = new Intent(mContext,Activity1.class);
+        mContext.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

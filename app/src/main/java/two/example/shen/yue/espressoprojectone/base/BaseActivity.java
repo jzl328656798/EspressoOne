@@ -1,7 +1,9 @@
 package two.example.shen.yue.espressoprojectone.base;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
@@ -20,6 +22,8 @@ import two.example.shen.yue.espressoprojectone.utils.PermissionUtils;
 public class BaseActivity extends AppCompatActivity implements EasyPermissions.PermissionCallbacks {
 
     private EasyCallBack callBack;
+
+    protected final String TAG = getClass().getSimpleName();
 
     public void startActivity(Class mClass) {
         Intent intent = new Intent(this, mClass);
@@ -48,10 +52,14 @@ public class BaseActivity extends AppCompatActivity implements EasyPermissions.P
         Log.i("Queen", "log:" + log);
     }
 
+    public void Log(String Tag, String log) {
+        Log.i(Tag, "log:" + log);
+    }
+
 
 //******************************************************************************************
 
-    public void setCallBack(EasyCallBack callBack){
+    public void setCallBack(EasyCallBack callBack) {
         this.callBack = callBack;
     }
 
@@ -67,15 +75,15 @@ public class BaseActivity extends AppCompatActivity implements EasyPermissions.P
         EasypermissionsUtils.requestPermission(this, "要照相用的", 5555, permission);
     }
 
-    public void requestPermission(String permission,EasyCallBack callBack) {
+    public void requestPermission(String permission, EasyCallBack callBack) {
         this.callBack = callBack;
         Log("requestPermission:" + permission);
         EasypermissionsUtils.requestPermission(this, "要照相用的", 5555, permission);
     }
 
-    public void somePermissionPermanentlyDenied(String permission){
+    public void somePermissionPermanentlyDenied(String permission) {
         Log("somePermissionPermanentlyDenied:" + permission);
-        boolean check = EasypermissionsUtils.somePermissionPermanentlyDenied(this,permission);
+        boolean check = EasypermissionsUtils.somePermissionPermanentlyDenied(this, permission);
         Log("somePermissionPermanentlyDenied check:" + check);
     }
 
@@ -104,6 +112,43 @@ public class BaseActivity extends AppCompatActivity implements EasyPermissions.P
                                            @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         Log("onRequestPermissionsResult 33333 requestCode：" + requestCode);
-        EasypermissionsUtils.onRequestPermissionsResult(requestCode, permissions, grantResults,this);
+        EasypermissionsUtils.onRequestPermissionsResult(requestCode, permissions, grantResults,
+                this);
+    }
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log(TAG, "onCreate");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log(TAG, "onResume");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log(TAG, "onStart");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log(TAG, "onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log(TAG, "onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log(TAG, "onDestroy");
     }
 }
