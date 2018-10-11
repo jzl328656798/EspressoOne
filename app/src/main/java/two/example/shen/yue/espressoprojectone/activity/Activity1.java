@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import two.example.shen.yue.espressoprojectone.R;
@@ -21,6 +22,7 @@ public class Activity1 extends BaseActivity implements QRCodeView.Delegate {
 
 
     private QRCodeView mQRCodeView;
+    private TextView tv_activity1;
 
     public static void sop(Context mContext){
         Intent intent = new Intent(mContext,Activity1.class);
@@ -32,6 +34,7 @@ public class Activity1 extends BaseActivity implements QRCodeView.Delegate {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity1);
 
+        tv_activity1 = findViewById(R.id.tv_activity1);
         mQRCodeView = (ZXingView) findViewById(R.id.zxingview);
         mQRCodeView.setDelegate(this);
     }
@@ -41,6 +44,7 @@ public class Activity1 extends BaseActivity implements QRCodeView.Delegate {
 
         Log.i("Queen", "result:" + result);
         Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
+        tv_activity1.setText(result);
         vibrate();
         mQRCodeView.startSpot();
     }

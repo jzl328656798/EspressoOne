@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
 
     <application
         android:name=".MyApplication"
@@ -38,6 +39,9 @@
         <activity android:name=".activity.Activity8" />
         <activity android:name=".activity.Activity9" />
         <activity android:name=".activity.Activity10" />
+        <activity android:name=".activity.Activity14" />
+        <activity android:name=".activity.Activity15"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".utils.CrashDialogActivity" />
 
         <service android:name=".service.TestIntentService1" />

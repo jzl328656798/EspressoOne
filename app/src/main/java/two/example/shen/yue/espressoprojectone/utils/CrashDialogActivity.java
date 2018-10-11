@@ -3,6 +3,7 @@ package two.example.shen.yue.espressoprojectone.utils;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
 import two.example.shen.yue.espressoprojectone.R;
@@ -27,6 +28,7 @@ public class CrashDialogActivity extends Activity {
         ErrorBean errorBean = (ErrorBean) getIntent().getSerializableExtra("error_bean");
         //错误解决
         tv_crash = findViewById(R.id.tv_crash);
+        tv_crash.setMovementMethod(ScrollingMovementMethod.getInstance());
         tv_crash.setText(errorBean.getErrorMsg());
     }
 }

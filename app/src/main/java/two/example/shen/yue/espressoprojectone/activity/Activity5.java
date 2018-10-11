@@ -42,8 +42,9 @@ public class Activity5 extends BaseActivity {
     private void setData(){
 
         String fileUrl = "file:///android_asset/OpenApp.html";
+        String fileUrl1 = "file:///android_asset/index.html";
 //        wv_activity5.loadUrl("http://wxpay.wxutil.com/mch/pay/h5.v2.php");
-        wv_activity5.loadUrl(fileUrl);
+        wv_activity5.loadUrl(fileUrl1);
     }
 
 
