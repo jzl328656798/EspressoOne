@@ -17,7 +17,7 @@ import pub.devrel.easypermissions.EasyPermissions;
 import two.example.shen.yue.espressoprojectone.activity.Activity1;
 import two.example.shen.yue.espressoprojectone.activity.Activity10;
 import two.example.shen.yue.espressoprojectone.activity.Activity13;
-import two.example.shen.yue.espressoprojectone.activity.Activity15;
+import two.example.shen.yue.espressoprojectone.activity.Activity16;
 import two.example.shen.yue.espressoprojectone.activity.Activity3;
 import two.example.shen.yue.espressoprojectone.activity.Activity4;
 import two.example.shen.yue.espressoprojectone.activity.Activity5;
@@ -135,7 +135,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn_main_btn12:
 //                errorTest();
-                startActivity(Activity15.class);
+                startActivity(Activity16.class);
                 break;
             default:
                 break;

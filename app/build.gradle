@@ -23,10 +23,15 @@ android {
     }
 }
 
+apply plugin: 'replugin-host-gradle'
+repluginHostConfig {
+    useAppCompat = true
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:27.+'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.google.zxing:core:3.3.2'
     implementation 'pub.devrel:easypermissions:1.2.0'
     implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
@@ -35,6 +40,8 @@ dependencies {
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.aliyun.openservices:aliyun-log-android-sdk:2.0.0'
     implementation 'com.android.support:percent:27.1.1'
+
+    implementation 'com.qihoo360.replugin:replugin-host-lib:2.3.0'
 }
 
 
