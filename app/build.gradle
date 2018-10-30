@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 27
@@ -29,19 +31,23 @@ repluginHostConfig {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.google.zxing:core:3.3.2'
     implementation 'pub.devrel:easypermissions:1.2.0'
     implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
-
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.aliyun.openservices:aliyun-log-android-sdk:2.0.0'
     implementation 'com.android.support:percent:27.1.1'
-
     implementation 'com.qihoo360.replugin:replugin-host-lib:2.3.0'
+    implementation project(path: ':kotlinone')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    //    implementation "org.jetbrains.anko:anko:$anko_version"
+//    implementation 'com.tencent.map:tencent-map-vector-sdk:latest.release'
+    implementation files('libs/TencentLocationSdk_v7.1.4.3_r4aa8ac63_20180911_165428.jar')
+    implementation files('libs/TencentMapSDK_Raster_v1.1.2.16281.jar')
 }
 
 

@@ -1,9 +1,11 @@
 package two.example.shen.yue.espressoprojectone.activity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -34,17 +36,21 @@ public class Activity5 extends BaseActivity {
         wv_activity5.getSettings().setJavaScriptEnabled(true);
 
         wv_activity5.setWebViewClient(new MyWebviewClient());
+        wv_activity5.setWebChromeClient(new MyWebChromeClient());
 
         setData();
     }
 
 
-    private void setData(){
+    private void setData() {
 
         String fileUrl = "file:///android_asset/OpenApp.html";
         String fileUrl1 = "file:///android_asset/index.html";
 //        wv_activity5.loadUrl("http://wxpay.wxutil.com/mch/pay/h5.v2.php");
-        wv_activity5.loadUrl(fileUrl1);
+//        wv_activity5.loadUrl(fileUrl1);
+        wv_activity5.loadUrl("https://m-test.oyohotels.cn/events/freestay3/?utm_source=android_app");
+//        wv_activity5.loadUrl("https://www.google.com.hk/");
+//        wv_activity5.loadUrl("https://www.baidu.com/");
     }
 
 
@@ -65,5 +71,27 @@ public class Activity5 extends BaseActivity {
             }
             return true;
         }
+
+        @Override
+        public void onPageFinished(WebView view, String url) {
+            super.onPageFinished(view, url);
+            Log("onPageFinished:" + view.getTitle());
+        }
+
+        @Override
+        public void onPageStarted(WebView view, String url, Bitmap favicon) {
+            super.onPageStarted(view, url, favicon);
+            Log("onPageStarted:"+view.getTitle());
+        }
+    }
+
+    private class MyWebChromeClient extends WebChromeClient {
+        @Override
+        public void onReceivedTitle(WebView view, String title) {
+            super.onReceivedTitle(view, title);
+            Log("onReceivedTitle:" + title);
+        }
+
+
     }
 }

@@ -13,6 +13,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
 
     <application
         android:name=".MyApplication"
@@ -29,6 +31,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--MV5BZ-BOLHJ-42HFF-FY3ZC-GZEYJ-ENBMA-->
+
+        <meta-data
+            android:name="TencentMapSDK"
+            android:value="MV5BZ-BOLHJ-42HFF-FY3ZC-GZEYJ-ENBMA"/>
+
         <activity android:name=".activity.Activity1" />
         <activity android:name=".activity.Activity2" />
         <activity android:name=".activity.Activity3" />
@@ -53,6 +62,13 @@
         <activity android:name=".activity.Activity12" />
         <activity android:name=".activity.Activity13"/>
         <activity android:name=".activity.Activity16"/>
+        <activity android:name=".activity.Activity17"/>
+        <activity android:name=".other.DefaultActivity"/>
+
+
+        <activity android:name=".kotlin.Kotlin1"/>
+        <activity android:name=".other.KotlinMapActivity"/>
+        <activity android:name=".other.JavaMapActivity"/>
     </application>
 
 </manifest>

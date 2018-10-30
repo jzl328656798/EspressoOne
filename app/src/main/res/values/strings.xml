@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">EspressoProjectOne</string>
     <string name="title_activity_11">Activity11</string>
     <string name="large_text">
@@ -91,4 +91,16 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+
+    <string name="str_click">click</string>
+
+    <string name="str_text1">Text Click</string>
+    <string name="str_text2">Text,$name</string>
+    <string name="str_btn1">Button Click</string>
+
+
+    <string name="xliff_string">
+        今天是<xliff:g id="WEEK">%1$s</xliff:g>,<xliff:g id="DAY">%2$d</xliff:g>号
+    </string>
+
 </resources>

@@ -16,14 +16,14 @@ import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 import two.example.shen.yue.espressoprojectone.activity.Activity1;
 import two.example.shen.yue.espressoprojectone.activity.Activity10;
-import two.example.shen.yue.espressoprojectone.activity.Activity13;
-import two.example.shen.yue.espressoprojectone.activity.Activity16;
 import two.example.shen.yue.espressoprojectone.activity.Activity3;
 import two.example.shen.yue.espressoprojectone.activity.Activity4;
 import two.example.shen.yue.espressoprojectone.activity.Activity5;
 import two.example.shen.yue.espressoprojectone.activity.Activity6;
 import two.example.shen.yue.espressoprojectone.activity.Activity7;
 import two.example.shen.yue.espressoprojectone.base.BaseActivity;
+import two.example.shen.yue.espressoprojectone.other.JavaMapActivity;
+import two.example.shen.yue.espressoprojectone.other.KotlinMapActivity;
 import two.example.shen.yue.espressoprojectone.service.TestIntentService1;
 import two.example.shen.yue.espressoprojectone.utils.PermissionUtils;
 
@@ -131,11 +131,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(Activity10.class);
                 break;
             case R.id.btn_main_btn11:
-                startActivity(Activity13.class);
+                startActivity(JavaMapActivity.class);
                 break;
             case R.id.btn_main_btn12:
 //                errorTest();
-                startActivity(Activity16.class);
+                startActivity(KotlinMapActivity.class);
                 break;
             default:
                 break;
