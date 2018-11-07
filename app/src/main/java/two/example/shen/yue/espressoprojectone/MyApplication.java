@@ -8,8 +8,7 @@ import android.os.Message;
 
 import com.aliyun.sls.android.sdk.utils.IPService;
 import com.qihoo360.replugin.RePlugin;
-
-import two.example.shen.yue.espressoprojectone.utils.CrashHandler;
+import com.tencent.bugly.crashreport.CrashReport;
 
 /**
  * Created by queen on 2018/7/30.
@@ -34,9 +33,10 @@ public class MyApplication extends Application {
         super.onCreate();
         RePlugin.App.onCreate();
         application = this;
-        new Thread(() -> IPService.getInstance().asyncGetIp(IPService.DEFAULT_URL, handlerAli))
-                .start();
-        CrashHandler.getInstance(this);
+//        new Thread(() -> IPService.getInstance().asyncGetIp(IPService.DEFAULT_URL, handlerAli))
+//                .start();
+//        CrashHandler.getInstance(this);
+        CrashReport.initCrashReport(getApplicationContext(), "d3602813f2", true);
     }
 
     @Override

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EspressoOne.iml" filepath="$PROJECT_DIR$/EspressoOne.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlinone/kotlinone.iml" filepath="$PROJECT_DIR$/kotlinone/kotlinone.iml" />
     </modules>
   </component>
 </project>

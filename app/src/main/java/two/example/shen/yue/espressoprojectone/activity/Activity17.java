@@ -2,16 +2,16 @@ package two.example.shen.yue.espressoprojectone.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 
 import two.example.shen.yue.espressoprojectone.R;
+import two.example.shen.yue.espressoprojectone.base.BaseActivity;
 import two.example.shen.yue.espressoprojectone.kotlinone.view.PageLayout;
 
 
-public class Activity17 extends AppCompatActivity {
+public class Activity17 extends BaseActivity {
 
 
     private PageLayout pageLayout;

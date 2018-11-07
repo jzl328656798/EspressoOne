@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.tencent.bugly.crashreport.CrashReport;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -16,6 +18,8 @@ import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 import two.example.shen.yue.espressoprojectone.activity.Activity1;
 import two.example.shen.yue.espressoprojectone.activity.Activity10;
+import two.example.shen.yue.espressoprojectone.activity.Activity18;
+import two.example.shen.yue.espressoprojectone.activity.Activity19;
 import two.example.shen.yue.espressoprojectone.activity.Activity3;
 import two.example.shen.yue.espressoprojectone.activity.Activity4;
 import two.example.shen.yue.espressoprojectone.activity.Activity5;
@@ -99,6 +103,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         btn_main_btn10.setOnClickListener(this);
         btn_main_btn11.setOnClickListener(this);
         btn_main_btn12.setOnClickListener(this);
+
+        findViewById(R.id.btn_main_btn13).setOnClickListener(this);
+        findViewById(R.id.btn_main_btn14).setOnClickListener(this);
+        findViewById(R.id.btn_main_btn15).setOnClickListener(this);
+        findViewById(R.id.btn_main_btn16).setOnClickListener(this);
     }
 
     @Override
@@ -135,7 +144,20 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn_main_btn12:
 //                errorTest();
+                CrashReport.testJavaCrash();
                 startActivity(KotlinMapActivity.class);
+                break;
+            case R.id.btn_main_btn13:
+                startActivity(Activity18.class);
+                break;
+            case R.id.btn_main_btn14:
+                startActivity(Activity19.class);
+                break;
+            case R.id.btn_main_btn15:
+
+                break;
+            case R.id.btn_main_btn16:
+
                 break;
             default:
                 break;

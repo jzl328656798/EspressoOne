@@ -95,4 +95,35 @@
         app:layout_constraintLeft_toRightOf="@id/btn_main_btn11"
         app:layout_constraintTop_toTopOf="@id/btn_main_btn11" />
 
+    <Button
+        android:id="@+id/btn_main_btn13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button13"
+        app:layout_constraintTop_toBottomOf="@id/btn_main_btn9" />
+
+    <Button
+        android:id="@+id/btn_main_btn14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button14"
+        app:layout_constraintLeft_toRightOf="@id/btn_main_btn13"
+        app:layout_constraintTop_toTopOf="@id/btn_main_btn13" />
+
+    <Button
+        android:id="@+id/btn_main_btn15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button15"
+        app:layout_constraintLeft_toRightOf="@id/btn_main_btn14"
+        app:layout_constraintTop_toTopOf="@id/btn_main_btn14" />
+
+    <Button
+        android:id="@+id/btn_main_btn16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button16"
+        app:layout_constraintLeft_toRightOf="@id/btn_main_btn15"
+        app:layout_constraintTop_toTopOf="@id/btn_main_btn15" />
+
 </android.support.constraint.ConstraintLayout>
