@@ -20,6 +20,7 @@ import two.example.shen.yue.espressoprojectone.activity.Activity1;
 import two.example.shen.yue.espressoprojectone.activity.Activity10;
 import two.example.shen.yue.espressoprojectone.activity.Activity18;
 import two.example.shen.yue.espressoprojectone.activity.Activity19;
+import two.example.shen.yue.espressoprojectone.activity.Activity20;
 import two.example.shen.yue.espressoprojectone.activity.Activity3;
 import two.example.shen.yue.espressoprojectone.activity.Activity4;
 import two.example.shen.yue.espressoprojectone.activity.Activity5;
@@ -157,7 +158,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
                 break;
             case R.id.btn_main_btn16:
-
+                startActivity(Activity20.class);
                 break;
             default:
                 break;

@@ -83,5 +83,12 @@ public class Activity1 extends BaseActivity implements QRCodeView.Delegate {
         vibrator.vibrate(200);
     }
 
+//    private void initData(){
+//        mEdAppid.setText("4912");
+//        mEdSecretKey.setText("9270366a9c90f3c3a264fb0f24bc4554");
+//        mNameEdit.setText("姜卓磊");
+//        mIdcardEdit.setText("220182198907103911");
+//        mPhoneEdit.setText("13917275427");
+//    }
 
 }

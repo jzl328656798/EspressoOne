@@ -82,6 +82,7 @@
         <activity android:name=".other.JavaMapActivity"/>
         <activity android:name=".activity.Activity18"/>
         <activity android:name=".activity.Activity19"/>
+        <activity android:name=".activity.Activity20"/>
     </application>
 
 </manifest>

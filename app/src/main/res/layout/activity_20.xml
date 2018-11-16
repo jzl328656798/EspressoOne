@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <EditText
+            android:id="@+id/appid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="appid" />
+
+        <EditText
+            android:id="@+id/secretkey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="SecretKey" />
+
+        <RadioGroup
+            android:id="@+id/server_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/server_sandbox"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/server_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试环境" />
+
+            <RadioButton
+                android:id="@+id/server_sandbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="沙箱环境" />
+
+            <RadioButton
+                android:id="@+id/server_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正式环境" />
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#000000" />
+
+        <EditText
+            android:id="@+id/idcard_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="(仅活体/二次验证)请输入身份证号"
+            android:maxLength="18"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="(仅活体/二次验证)请输入姓名"
+            android:maxLength="15"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/phone_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="(外部传入手机号)请输入手机号"
+            android:maxLength="15"
+            android:singleLine="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#000000" />
+
+        <EditText
+            android:id="@+id/scene_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="请输入sceneID"
+            android:maxLength="15"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/authenticate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="实名认证" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#000000" />
+
+        <EditText
+            android:id="@+id/token_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="(二次验证流程)请输入首次验证成功的token"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/secondary_auth_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="二次验证" />
+
+        <TextView
+            android:id="@+id/sdk_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -6,6 +6,8 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "two.example.shen.yue.espressoprojectone"
+//        applicationId "com.tencent.gac.driver"
+//        applicationId "com.tencent.identitydemo"
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
@@ -14,8 +16,17 @@ android {
         vectorDrawables.useSupportLibrary = true
         ndk {
             // 设置支持的SO库架构
-            abiFilters 'armeabi-v7a', 'x86' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a','armeabi'
+            abiFilters 'armeabi'
+//            abiFilters 'armeabi-v7a', 'x86'
+            //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a','armeabi'
         }
+
+        manifestPlaceholders = [
+
+                XG_ACCESS_ID : "注册应用的accessid",
+                XG_ACCESS_KEY: "注册应用的accesskey",
+        ]
+
     }
     buildTypes {
         release {
@@ -32,6 +43,12 @@ android {
 apply plugin: 'replugin-host-gradle'
 repluginHostConfig {
     useAppCompat = true
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
@@ -57,6 +74,13 @@ dependencies {
     implementation 'com.tencent.bugly:nativecrashreport:3.3.1'
 //    AndroidAutoSize
     implementation 'me.jessyan:autosize:1.0.5'
+
+    //指定使用debug版本，此时需要在authsdk项目中设置publishNonDefault为true，否则会出现找不到debug版本
+//使用此方法，在debug下authsdk可调试
+//    debugCompile project(path: ':authsdk', configuration: 'debug')
+//    releaseCompile project(':authsdk')
+    implementation(name: 'AuthSdk_1851_release', ext: 'aar')
+
 }
 
 
