@@ -1,12 +1,16 @@
 package two.example.shen.yue.espressoprojectone.activity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
 
 import two.example.shen.yue.espressoprojectone.R;
 import two.example.shen.yue.espressoprojectone.base.BaseActivity;
+import two.example.shen.yue.espressoprojectone.utils.NotificationUtils;
 
 /**
  * Created by queen on 2018/7/25.
@@ -20,6 +24,7 @@ public class Activity9 extends BaseActivity {
 
 
     private TextView tv_activity9;
+    private Button btn_activity9;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,6 +32,12 @@ public class Activity9 extends BaseActivity {
         setContentView(R.layout.activity9);
         tv_activity9 = findViewById(R.id.tv_activity9);
         initData();
+
+        btn_activity9 = findViewById(R.id.btn_activity9);
+        btn_activity9.setOnClickListener(e -> {
+            NotificationUtils utils = new NotificationUtils(this);
+            utils.sendNotification("123", "123456789");
+        });
     }
 
     private void initData() {
@@ -50,5 +61,12 @@ public class Activity9 extends BaseActivity {
 
     private void append(String str) {
         tv_activity9.append(str + "\n");
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        String str = intent.getStringExtra("test");
+        Log.i(TAG, "str:" + str);
     }
 }

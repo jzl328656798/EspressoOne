@@ -26,6 +26,7 @@ import two.example.shen.yue.espressoprojectone.activity.Activity4;
 import two.example.shen.yue.espressoprojectone.activity.Activity5;
 import two.example.shen.yue.espressoprojectone.activity.Activity6;
 import two.example.shen.yue.espressoprojectone.activity.Activity7;
+import two.example.shen.yue.espressoprojectone.activity.Activity9;
 import two.example.shen.yue.espressoprojectone.base.BaseActivity;
 import two.example.shen.yue.espressoprojectone.other.JavaMapActivity;
 import two.example.shen.yue.espressoprojectone.other.KotlinMapActivity;
@@ -115,7 +116,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_main_btn1:
-                startActivity(Activity1.class);
+                startActivity(Activity9.class);
 //                Activity1.sop(this);
 //                test1();
                 break;

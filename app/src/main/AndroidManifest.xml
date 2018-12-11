@@ -57,7 +57,8 @@
         <activity android:name=".activity.Activity6" />
         <activity android:name=".activity.Activity7" />
         <activity android:name=".activity.Activity8" />
-        <activity android:name=".activity.Activity9" />
+        <activity android:name=".activity.Activity9"
+            android:launchMode="singleTask"/>
         <activity android:name=".activity.Activity10" />
         <activity android:name=".activity.Activity14" />
         <activity android:name=".activity.Activity15"

@@ -47,8 +47,8 @@ public class Activity5 extends BaseActivity {
         String fileUrl = "file:///android_asset/OpenApp.html";
         String fileUrl1 = "file:///android_asset/index.html";
 //        wv_activity5.loadUrl("http://wxpay.wxutil.com/mch/pay/h5.v2.php");
-//        wv_activity5.loadUrl(fileUrl1);
-        wv_activity5.loadUrl("https://m-test.oyohotels.cn/events/freestay3/?utm_source=android_app");
+        wv_activity5.loadUrl(fileUrl);
+//        wv_activity5.loadUrl("https://m-test.oyohotels.cn/events/freestay3/?utm_source=android_app");
 //        wv_activity5.loadUrl("https://www.google.com.hk/");
 //        wv_activity5.loadUrl("https://www.baidu.com/");
     }
@@ -68,6 +68,17 @@ public class Activity5 extends BaseActivity {
                 Map<String, String> extraHeaders = new HashMap<>();
                 extraHeaders.put("Referer", realm);
                 view.loadUrl(url, extraHeaders);
+            }
+
+
+            try{
+                if(url.startsWith("scheme://")){
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(intent);
+                    return true;
+                }
+            }catch (Exception e){
+                return false;
             }
             return true;
         }
