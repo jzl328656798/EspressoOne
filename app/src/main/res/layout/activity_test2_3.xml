@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@android:drawable/ic_delete" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="SuperCruise"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="沪ABB233"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp">
+
+        <LinearLayout
+            android:id="@+id/ll_test1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_describe"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"
+                tools:text="订阅行程报告后可以查看SC最新行程报告及历史行程报告" />
+
+            <TextView
+                android:id="@+id/tv_subscribe"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:drawable/btn_default"
+                android:gravity="center"
+                android:text="订阅行程报告" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_test2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tv_test_sc1"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:drawable/btn_default"
+                android:gravity="center"
+                android:text="SC最新行程报告"
+                android:transitionName="simple text view1" />
+
+            <TextView
+                android:id="@+id/tv_test_sc2"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:drawable/btn_default"
+                android:gravity="center"
+                android:text="历史行程报告"
+                android:transitionName="simple text view2" />
+
+            <TextView
+                android:id="@+id/tv_test_sc3"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:drawable/btn_default"
+                android:gravity="center"
+                android:text="SC使用情况汇总"
+                android:transitionName="simple text view3" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

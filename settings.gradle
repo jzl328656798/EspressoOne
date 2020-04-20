@@ -1,1 +1,1 @@
-include ':app', ':kotlinone', ':buick'
+include ':app'

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EspressoOne.iml" filepath="$PROJECT_DIR$/EspressoOne.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kotlinone/kotlinone.iml" filepath="$PROJECT_DIR$/kotlinone/kotlinone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EspressoOne.iml" filepath="$PROJECT_DIR$/EspressoOne.iml" group="EspressoOne" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="EspressoOne/app" />
     </modules>
   </component>
 </project>

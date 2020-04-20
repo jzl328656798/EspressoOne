@@ -12,18 +12,21 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:name=".MyApplication"
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,58 +35,24 @@
             </intent-filter>
         </activity>
 
-        <!--MV5BZ-BOLHJ-42HFF-FY3ZC-GZEYJ-ENBMA-->
+        <activity android:name=".test1.Test1Activity" />
+        <activity android:name=".test2.Test2Activity1" />
+        <activity android:name=".test2.Test2Activity2" />
+        <activity android:name=".test2.Test2Activity3" />
+        <activity android:name=".test3.Test3Activity1" />
+        <activity android:name=".test3.Test3Activity2" />
+        <activity android:name=".test4.Test4Activity1" />
+        <activity android:name=".test4.Test4Activity2" />
+        <activity android:name=".test5.Test5Activity1" />
+        <activity android:name=".test6.Test6Activity1" />
+        <activity android:name=".test6.Test6Activity2" />
+        <activity android:name=".test6.Test6Activity3" />
+        <activity android:name=".test7.Test7Activity1" />
+        <activity android:name=".test7.Test7Activity2" />
+        <activity android:name=".test8.Test8Activity1" />
+        <activity android:name=".test8.Test8Activity2" />
+        <activity android:name=".test9.Test9Activity1" />
 
-        <meta-data
-            android:name="TencentMapSDK"
-            android:value="MV5BZ-BOLHJ-42HFF-FY3ZC-GZEYJ-ENBMA"/>
-
-
-        <!--AndroidAutoSize-->
-        <meta-data
-            android:name="design_width_in_dp"
-            android:value="400"/>
-        <!--AndroidAutoSize-->
-        <meta-data
-            android:name="design_height_in_dp"
-            android:value="640"/>
-
-
-        <activity android:name=".activity.Activity1" />
-        <activity android:name=".activity.Activity2" />
-        <activity android:name=".activity.Activity3" />
-        <activity android:name=".activity.Activity4" />
-        <activity android:name=".activity.Activity5" />
-        <activity android:name=".activity.Activity6" />
-        <activity android:name=".activity.Activity7" />
-        <activity android:name=".activity.Activity8" />
-        <activity android:name=".activity.Activity9"
-            android:launchMode="singleTask"/>
-        <activity android:name=".activity.Activity10" />
-        <activity android:name=".activity.Activity14" />
-        <activity android:name=".activity.Activity15"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".utils.CrashDialogActivity" />
-
-        <service android:name=".service.TestIntentService1" />
-
-        <activity
-            android:name=".activity.Activity11"
-            android:label="@string/title_activity_11"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.Activity12" />
-        <activity android:name=".activity.Activity13"/>
-        <activity android:name=".activity.Activity16"/>
-        <activity android:name=".activity.Activity17"/>
-        <activity android:name=".other.DefaultActivity"/>
-
-
-        <activity android:name=".kotlin.Kotlin1"/>
-        <activity android:name=".other.KotlinMapActivity"/>
-        <activity android:name=".other.JavaMapActivity"/>
-        <activity android:name=".activity.Activity18"/>
-        <activity android:name=".activity.Activity19"/>
-        <activity android:name=".activity.Activity20"/>
     </application>
 
 </manifest>

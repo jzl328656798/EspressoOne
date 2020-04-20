@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="26dp"
+        android:padding="8dp"
+        android:src="@mipmap/icon_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_sc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_back">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="超级智能驾驶"
+            android:textColor="@color/color_4B4B4B"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_sc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="SuperCruise（以下简称SC）"
+            android:textColor="@color/color_4B4B4B"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_plate_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:text="沪ABB233"
+        android:textColor="#ff4b4b4b"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_sc" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_steering_wheel"
+        android:layout_width="224dp"
+        android:layout_height="390dp"
+        android:layout_marginBottom="18dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/tv_subscribe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_plate_number">
+
+        <ImageView
+            android:id="@+id/iv_steering_wheel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/icon_aiming_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_steering_wheel_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.357" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_steering_wheel_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.428" />
+
+        <ImageView
+            android:id="@+id/iv_steering_wheel_indicate"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:background="@mipmap/icon_steering_wheel_indicate"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/gl_steering_wheel_left"
+            app:layout_constraintTop_toTopOf="@id/gl_steering_wheel_top" />
+
+        <ImageView
+            android:id="@+id/iv_steering_wheel_used"
+            android:layout_width="116dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="6dp"
+            android:background="@mipmap/icon_steering_wheel_used"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/iv_steering_wheel_indicate"
+            app:layout_constraintTop_toBottomOf="@id/iv_steering_wheel_indicate" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_subscribe_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="24dp"
+        android:lineSpacingExtra="8dp"
+        android:textColor="#ff787878"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/tv_subscribe"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_subscribe"
+        android:layout_width="120dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="60dp"
+        android:background="#b5a36a"
+        android:gravity="center"
+        android:text="查看行程报告"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

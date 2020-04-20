@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:transitionGroup="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_helper"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:layout_marginTop="20dp"
+                android:background="#14b5a36a"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:visibility="invisible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="您是否不太了解SuperCruise，掐指一算这份"
+                    android:textColor="#787878"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="使用教程 可以助您一臂之力"
+                    android:textColor="#787878"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <two.example.shen.yue.espressoprojectone.test6.Test6View1
+                    android:id="@+id/test6_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:visibility="invisible" />
+
+                <two.example.shen.yue.espressoprojectone.test6.Test6View2
+                    android:id="@+id/test6_view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <two.example.shen.yue.espressoprojectone.test4.Test4ScNewestReportView21
+                android:id="@+id/sc_r_v2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:padding="8dp"
+        android:src="@mipmap/icon_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_new_report"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="最新行程报告"
+        android:textColor="#ff787878"
+        android:textSize="15sp"
+        android:transitionName="simple text view1"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@id/tv_history_report"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+    <TextView
+        android:id="@+id/tv_history_report"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="历史行程报告"
+        android:textColor="#ff787878"
+        android:textSize="15sp"
+        android:transitionName="simple text view2"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@id/tv_used"
+        app:layout_constraintStart_toEndOf="@id/tv_new_report"
+        app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+    <TextView
+        android:id="@+id/tv_used"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="使用情况汇总"
+        android:textColor="#ff787878"
+        android:textSize="15sp"
+        android:transitionName="simple text view3"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_history_report"
+        app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+    <View
+        android:id="@+id/indicator"
+        android:layout_width="24dp"
+        android:layout_height="3dp"
+        android:background="#ffb5a36a"
+        android:transitionName="view indicator"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/tv_new_report"
+        app:layout_constraintStart_toStartOf="@id/tv_new_report"
+        app:layout_constraintTop_toBottomOf="@id/tv_new_report" />
+
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_1Eb5a36a"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/indicator" />
+
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_line" />
+
+</android.support.constraint.ConstraintLayout>

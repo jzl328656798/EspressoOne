@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_1Eb5a36a">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/color_26b5a36a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_date"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:src="@mipmap/icon_date"
+        app:layout_constraintBottom_toBottomOf="@id/v_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="2020-11-14 16:00"
+        android:textColor="@color/color_787878"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_date"
+        app:layout_constraintStart_toEndOf="@id/iv_date"
+        app:layout_constraintTop_toTopOf="@id/iv_date" />
+
+    <ImageView
+        android:id="@+id/iv_time"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:src="@mipmap/icon_time"
+        app:layout_constraintBottom_toBottomOf="@id/v_line"
+        app:layout_constraintStart_toStartOf="@id/gl_middle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="30min"
+        android:textColor="@color/color_787878"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_time"
+        app:layout_constraintStart_toEndOf="@id/iv_time"
+        app:layout_constraintTop_toTopOf="@id/iv_time" />
+
+    <TextView
+        android:id="@+id/tv_total_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="行驶总里程"
+        android:textColor="@color/color_787878"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/gl_1"
+        app:layout_constraintTop_toBottomOf="@id/v_line" />
+
+    <TextView
+        android:id="@+id/tv_total_distance_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="20km"
+        android:textColor="@color/color_4B4B4B"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tv_total_distance"
+        app:layout_constraintTop_toBottomOf="@id/tv_total_distance" />
+
+    <TextView
+        android:id="@+id/tv_usable_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="SC可用里程"
+        android:textColor="@color/color_787878"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/gl_2"
+        app:layout_constraintTop_toBottomOf="@id/v_line" />
+
+    <TextView
+        android:id="@+id/tv_usable_distance_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="20km"
+        android:textColor="@color/color_4B4B4B"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tv_usable_distance"
+        app:layout_constraintTop_toBottomOf="@id/tv_usable_distance" />
+
+    <TextView
+        android:id="@+id/tv_used_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="SC实际使用里程"
+        android:textColor="@color/color_787878"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/gl_3"
+        app:layout_constraintTop_toBottomOf="@id/v_line" />
+
+    <TextView
+        android:id="@+id/tv_used_distance_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="20km"
+        android:textColor="@color/color_4B4B4B"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tv_used_distance"
+        app:layout_constraintTop_toBottomOf="@id/tv_used_distance" />
+
+
+    <TextView
+        android:id="@+id/tv_average_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="行驶总里程"
+        android:textColor="@color/color_787878"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/gl_1"
+        app:layout_constraintTop_toBottomOf="@id/tv_total_distance_value" />
+
+    <TextView
+        android:id="@+id/tv_average_speed_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="32dp"
+        android:text="65km"
+        android:textColor="@color/color_4B4B4B"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_average_speed"
+        app:layout_constraintTop_toBottomOf="@id/tv_average_speed" />
+
+    <TextView
+        android:id="@+id/tv_sc_average_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SC可用里程"
+        android:textColor="@color/color_787878"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/gl_2"
+        app:layout_constraintTop_toBottomOf="@id/tv_usable_distance_value" />
+
+    <TextView
+        android:id="@+id/tv_sc_average_speed_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="32dp"
+        android:text="80km"
+        android:textColor="@color/color_4B4B4B"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_sc_average_speed"
+        app:layout_constraintTop_toBottomOf="@id/tv_sc_average_speed" />
+
+
+</android.support.constraint.ConstraintLayout>

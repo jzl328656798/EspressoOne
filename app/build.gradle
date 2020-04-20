@@ -6,27 +6,11 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "two.example.shen.yue.espressoprojectone"
-//        applicationId "com.tencent.gac.driver"
-//        applicationId "com.tencent.identitydemo"
-        minSdkVersion 16
+        minSdkVersion 23
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
-        ndk {
-            // 设置支持的SO库架构
-            abiFilters 'armeabi-v7a'
-//            abiFilters 'armeabi-v7a', 'x86'
-            //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a','armeabi'
-        }
-
-        manifestPlaceholders = [
-
-                XG_ACCESS_ID : "注册应用的accessid",
-                XG_ACCESS_KEY: "注册应用的accesskey",
-        ]
-
     }
     buildTypes {
         release {
@@ -45,64 +29,31 @@ android {
     }
 }
 
-apply plugin: 'replugin-host-gradle'
-repluginHostConfig {
-    useAppCompat = true
-}
-
 repositories {
     flatDir {
         dirs 'libs'
     }
+    mavenCentral()
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.google.zxing:core:3.3.2'
-    implementation 'pub.devrel:easypermissions:1.2.0'
-    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
-    implementation 'com.android.support:design:27.1.1'
-    implementation 'com.android.support:support-v4:27.1.1'
-    implementation 'com.aliyun.openservices:aliyun-log-android-sdk:2.0.0'
-    implementation 'com.android.support:percent:27.1.1'
-    implementation 'com.qihoo360.replugin:replugin-host-lib:2.3.0'
-    implementation project(path: ':kotlinone')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    //    implementation "org.jetbrains.anko:anko:$anko_version"
-//    implementation 'com.tencent.map:tencent-map-vector-sdk:latest.release'
-    implementation files('libs/TencentLocationSdk_v7.1.4.3_r4aa8ac63_20180911_165428.jar')
-    implementation files('libs/TencentMapSDK_Raster_v1.1.2.16281.jar')
-
-    implementation 'com.tencent.bugly:crashreport:2.6.6.1'
-    implementation 'com.tencent.bugly:nativecrashreport:3.3.1'
-//    AndroidAutoSize
-    implementation 'me.jessyan:autosize:1.0.5'
-
-    //指定使用debug版本，此时需要在authsdk项目中设置publishNonDefault为true，否则会出现找不到debug版本
-//使用此方法，在debug下authsdk可调试
-//    debugCompile project(path: ':authsdk', configuration: 'debug')
-//    releaseCompile project(':authsdk')
-    implementation(name: 'AuthSdk_1851_release', ext: 'aar')
-    implementation files('libs/jni.jar')
-
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation(name: 'token-release', ext: 'aar')
 }
-
-
 
 repositories {
     mavenCentral()
     jcenter()
 }
 
-
-
-
 buildscript {
     repositories {
         mavenCentral() // or jCenter()
         jcenter()
     }
-
 }

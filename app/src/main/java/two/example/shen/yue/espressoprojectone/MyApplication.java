@@ -2,13 +2,6 @@ package two.example.shen.yue.espressoprojectone;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.res.Configuration;
-import android.os.Handler;
-import android.os.Message;
-
-import com.aliyun.sls.android.sdk.utils.IPService;
-import com.qihoo360.replugin.RePlugin;
-import com.tencent.bugly.crashreport.CrashReport;
 
 /**
  * Created by queen on 2018/7/30.
@@ -25,50 +18,11 @@ public class MyApplication extends Application {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-        RePlugin.App.attachBaseContext(this);
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        RePlugin.App.onCreate();
-        application = this;
-//        new Thread(() -> IPService.getInstance().asyncGetIp(IPService.DEFAULT_URL, handlerAli))
-//                .start();
-//        CrashHandler.getInstance(this);
-        CrashReport.initCrashReport(getApplicationContext(), "d3602813f2", true);
     }
-
-    @Override
-    public void onLowMemory() {
-        super.onLowMemory();
-        RePlugin.App.onLowMemory();
-    }
-
-    @Override
-    public void onTrimMemory(int level) {
-        super.onTrimMemory(level);
-        RePlugin.App.onTrimMemory(level);
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        RePlugin.App.onConfigurationChanged(newConfig);
-    }
-
-    private Handler handlerAli = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case IPService.HANDLER_MESSAGE_GETIP_CODE:
-//                    AliLogUtils.SOURCE_IP = (String) msg.obj;
-//                    startActivity(new Intent(application, CrashDialogActivity.class));
-                    return;
-            }
-            super.handleMessage(msg);
-        }
-    };
-
 
 }
