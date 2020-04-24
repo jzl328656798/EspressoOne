@@ -3,13 +3,15 @@ package two.example.shen.yue.espressoprojectone;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 
+import two.example.shen.yue.espressoprojectone.test4.Test4Activity2;
 import two.example.shen.yue.espressoprojectone.test6.Test6Activity2;
 import two.example.shen.yue.espressoprojectone.test6.Test6Activity3;
 import two.example.shen.yue.espressoprojectone.test7.Test7Activity2;
 import two.example.shen.yue.espressoprojectone.test8.Test8Activity1;
-import two.example.shen.yue.espressoprojectone.test9.Test9Activity1;
 
 
 public class MainActivity extends Activity {
@@ -23,7 +25,7 @@ public class MainActivity extends Activity {
         findViewById(R.id.btn1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Test9Activity1.class));
+                startActivity(new Intent(MainActivity.this, Test4Activity2.class));
             }
         });
 
@@ -55,5 +57,11 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(MainActivity.this, Test8Activity1.class));
             }
         });
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        Log.i("queen", "onTouchEvent:" + event.getAction());
+        return super.onTouchEvent(event);
     }
 }

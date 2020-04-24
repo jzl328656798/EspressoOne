@@ -7,6 +7,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
+import android.view.MotionEvent
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.TranslateAnimation
@@ -31,14 +32,16 @@ class Test4Activity2 : AppCompatActivity() {
     private val b = Test4FragmentB()
     private val c = Test4FragmentC()
 
+    private val onTouchListeners = ArrayList<MyOnTouchListener>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test4_2)
         iv_back.setOnClickListener {
             startActivity(Intent(this, Test4Activity1::class.java))
             finish()
-
         }
+
         textViewList.add(tv_new_report)
         textViewList.add(tv_history_report)
         textViewList.add(tv_used)
@@ -59,6 +62,20 @@ class Test4Activity2 : AppCompatActivity() {
         }
         switchTitle(tv_new_report)
         switchFragment(a)
+    }
+
+    override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
+        //Log.i("queen", "dispatchTouchEvent")
+        onTouchListeners.forEach { it.onTouch(ev) }
+        return super.dispatchTouchEvent(ev)
+    }
+
+    fun registerMyOnTouchListener(myOnTouchListener: MyOnTouchListener) {
+        onTouchListeners.add(myOnTouchListener)
+    }
+
+    fun unregisterMyOnTouchListener(myOnTouchListener: MyOnTouchListener) {
+        onTouchListeners.remove(myOnTouchListener)
     }
 
     private fun switchTitle(textView: TextView) {
