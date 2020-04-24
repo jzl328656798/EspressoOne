@@ -4,6 +4,9 @@
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
+/.idea/caches
+/.idea/codeStyles
+/.idea/inspectionProfiles
 .DS_Store
 /build
 /captures
