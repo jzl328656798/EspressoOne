@@ -6,9 +6,7 @@ import android.animation.ValueAnimator
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.view.animation.OvershootInterpolator
 import kotlinx.android.synthetic.main.fragment_test4_a.*
 import two.example.shen.yue.espressoprojectone.R
@@ -18,10 +16,12 @@ import two.example.shen.yue.espressoprojectone.R
  * Date: 2020/3/27 1:58 PM
  * Describe: Test4FragmentA
  */
-class Test4FragmentA : Fragment() {
+class Test4FragmentA : Fragment(), MyOnTouchListener {
 
     private val animatorSet = AnimatorSet()
     private var isMeasured = true
+    private val listener = SVCGestureListener()
+    private var mGestureDetector: GestureDetector? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_test4_a, container, false)
@@ -31,7 +31,7 @@ class Test4FragmentA : Fragment() {
         super.onHiddenChanged(hidden)
         Log.i("queen", "hidden:$hidden")
         if (!hidden) {
-            test6_view1.startAnimate(456,59)
+            test6_view1.startAnimate(456, 59)
             test6_view2.startAnimate(200)
             sc_r_v2.startAnimate(200f)
         }
@@ -54,6 +54,23 @@ class Test4FragmentA : Fragment() {
                 animatorSet.start()
                 isMeasured = false
             }
+        }
+        if (requireActivity() is Test4Activity2) {
+            (requireActivity() as Test4Activity2).registerMyOnTouchListener(this)
+        }
+
+        mGestureDetector = GestureDetector(requireActivity(), listener)
+    }
+
+    override fun onTouch(ev: MotionEvent): Boolean {
+        //Log.i("queen", "onTouch")
+        return mGestureDetector?.onTouchEvent(ev) ?: false
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        if (requireActivity() is Test4Activity2) {
+            (requireActivity() as Test4Activity2).unregisterMyOnTouchListener(this)
         }
     }
 
@@ -114,7 +131,7 @@ class Test4FragmentA : Fragment() {
             override fun onAnimationRepeat(animation: Animator?) {}
 
             override fun onAnimationEnd(animation: Animator?) {
-                test6_view1.startAnimate(456,59)
+                test6_view1.startAnimate(456, 59)
                 test6_view2.startAnimate(200)
             }
 
