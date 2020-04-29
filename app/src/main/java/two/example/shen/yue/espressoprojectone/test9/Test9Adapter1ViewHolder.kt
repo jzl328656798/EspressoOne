@@ -1,6 +1,7 @@
 package two.example.shen.yue.espressoprojectone.test9
 
 import two.example.shen.yue.espressoprojectone.sc.ScVideoPlayer
+import two.example.shen.yue.espressoprojectone.test9.view.JCVideoPlayerStandard
 
 /**
  * Author: Queen
@@ -8,5 +9,5 @@ import two.example.shen.yue.espressoprojectone.sc.ScVideoPlayer
  * Describe: Test9Adapter1ViewHolder
  */
 class Test9Adapter1ViewHolder {
-    var jcVideoPlayer: ScVideoPlayer? = null
+    var jcVideoPlayer: JCVideoPlayerStandard? = null
 }

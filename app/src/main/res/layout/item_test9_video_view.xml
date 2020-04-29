@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <two.example.shen.yue.espressoprojectone.sc.ScVideoPlayer
+    <two.example.shen.yue.espressoprojectone.test9.view.JCVideoPlayerStandard
         android:id="@+id/video_player"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
