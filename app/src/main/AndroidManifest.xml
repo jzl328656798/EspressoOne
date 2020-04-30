@@ -54,6 +54,7 @@
         <activity android:name=".test9.Test9Activity1" />
         <activity android:name=".test10.Test10Activity1" />
         <activity android:name=".test1.Test1Activity1" />
+        <activity android:name=".test10.Test10Activity2" />
 
     </application>
 
