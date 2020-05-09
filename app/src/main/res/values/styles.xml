@@ -97,7 +97,7 @@
     </style>
 
 
-    <style name="queen_dialog_style">
+    <style name="queen_dialog_style" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/queen_dialog_bottom_in</item>
         <item name="android:windowExitAnimation">@anim/queen_dialog_bottom_out</item>
     </style>

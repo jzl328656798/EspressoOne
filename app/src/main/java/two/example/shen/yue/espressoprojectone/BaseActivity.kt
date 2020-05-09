@@ -1,6 +1,7 @@
 package two.example.shen.yue.espressoprojectone
 
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 
 /**
  * Author: Queen
@@ -20,5 +21,9 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     fun getLeftDistance() = 30f.dp2px().toInt()
+
+    fun log(message: Any) {
+        Log.i("queen", message.toString())
+    }
 
 }

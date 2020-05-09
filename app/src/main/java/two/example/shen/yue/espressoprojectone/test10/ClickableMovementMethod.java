@@ -40,7 +40,7 @@ public class ClickableMovementMethod extends LinkMovementMethod {
             Layout layout = widget.getLayout();
             int line = layout.getLineForVertical(y);
             int off = layout.getOffsetForHorizontal(line, x);
-            ClickableImageSpan[] imageSpans = buffer.getSpans(off, off, ClickableImageSpan.class);
+            CenterImageSpan[] imageSpans = buffer.getSpans(off, off, CenterImageSpan.class);
             if (imageSpans.length != 0) {
                 if (action == MotionEvent.ACTION_UP) {
                     imageSpans[0].onClick(widget);
