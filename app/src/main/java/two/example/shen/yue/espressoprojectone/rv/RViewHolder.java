@@ -1,11 +1,12 @@
 package two.example.shen.yue.espressoprojectone.rv;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Author: Queen
@@ -24,7 +25,7 @@ public class RViewHolder extends RecyclerView.ViewHolder {
      */
     private View mConvertView;
 
-    public RViewHolder(View itemView) {
+    RViewHolder(View itemView) {
         super(itemView);
         this.mConvertView = itemView;
         mViews = new SparseArray<>();
@@ -33,7 +34,7 @@ public class RViewHolder extends RecyclerView.ViewHolder {
     /**
      * 初始化入口
      */
-    public static RViewHolder createViewHolder(Context context, ViewGroup parent, int layoutId) {
+    static RViewHolder createViewHolder(Context context, ViewGroup parent, int layoutId) {
         View itemView = LayoutInflater.from(context).inflate(layoutId, parent, false);
         return new RViewHolder(itemView);
     }
@@ -41,7 +42,7 @@ public class RViewHolder extends RecyclerView.ViewHolder {
     /**
      * 根据id 获取View
      */
-    public <T extends View> T getView(int viewId) {
+    <T extends View> T getView(int viewId) {
         View view = mViews.get(viewId);
         if (view == null) {
             view = mConvertView.findViewById(viewId);
@@ -53,7 +54,7 @@ public class RViewHolder extends RecyclerView.ViewHolder {
     /**
      * 获取条目view
      */
-    public View getConvertView() {
+    View getConvertView() {
         return mConvertView;
     }
 

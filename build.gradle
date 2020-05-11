@@ -4,33 +4,21 @@ buildscript {
     ext.kotlin_version = '1.3.61'
 
     repositories {
-        google()
-        jcenter()
-        maven {
-            url "https://jitpack.io"
-        }
-        maven {
-            url "https://oss.sonatype.org/content/groups/public"
-        }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.1'
-
-        classpath 'com.qihoo360.replugin:replugin-host-gradle:2.3.0'
+        classpath 'com.android.tools.build:gradle:3.6.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
 allprojects {
     repositories {
-        google()
-        jcenter()
-        maven {
-            url "https://jitpack.io"
-        }
-        maven {
-            url "https://oss.sonatype.org/content/groups/public"
-        }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
     }
 }
 

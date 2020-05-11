@@ -1,12 +1,12 @@
 package two.example.shen.yue.espressoprojectone.test2
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_test2_a.*
 import two.example.shen.yue.espressoprojectone.R
 

@@ -1,9 +1,7 @@
-package two.example.shen.yue.espressoprojectone;
+package two.example.shen.yue.espressoprojectone.rv;
 
-import android.support.v4.util.SparseArrayCompat;
 
-import two.example.shen.yue.espressoprojectone.rv.RViewHolder;
-import two.example.shen.yue.espressoprojectone.rv.RViewItem;
+import androidx.collection.SparseArrayCompat;
 
 /**
  * Author: Queen
@@ -15,7 +13,7 @@ public class RViewItemManager<T> {
     private SparseArrayCompat<RViewItem<T>> styles = new SparseArrayCompat<>();
 
     public void addStyles(RViewItem<T> item) {
-        if (item != null) {
+        if (item != null && !styles.containsValue(item)) {
             styles.put(styles.size(), item);
         }
     }
@@ -42,7 +40,7 @@ public class RViewItemManager<T> {
         for (int i = 0; i < styles.size(); i++) {
             RViewItem<T> item = styles.valueAt(i);
             if (item.isItemView(entity, position)) {
-                item.convert(holder,entity,position);
+                item.convert(holder, entity, position);
                 return;
             }
         }

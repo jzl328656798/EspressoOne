@@ -1,7 +1,7 @@
 package two.example.shen.yue.espressoprojectone.test3
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import two.example.shen.yue.espressoprojectone.R
 
 /**

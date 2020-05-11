@@ -27,7 +27,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".test13.MainActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,6 +57,8 @@
         <activity android:name=".test11.Test11Activity1" />
         <activity android:name=".test12.Test12Activity1" />
         <activity android:name=".test13.Test13Activity1" />
+        <activity android:name=".rv.RVTestActivity1" />
+        <activity android:name=".rv.RVTestActivity2" />
     </application>
 
 </manifest>

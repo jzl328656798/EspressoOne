@@ -1,13 +1,12 @@
 package two.example.shen.yue.espressoprojectone.rv;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import two.example.shen.yue.espressoprojectone.RViewItemManager;
 
 /**
  * Author: Queen
@@ -22,20 +21,42 @@ public class RViewAdapter<T> extends RecyclerView.Adapter<RViewHolder> {
 
     private RViewItemManager<T> itemStyle;
 
+    public RViewAdapter(List<T> data) {
+        this(data, null);
+    }
+
     public RViewAdapter(List<T> data, RViewItem<T> item) {
         if (data == null) {
             data = new ArrayList<>();
         }
         this.data = data;
         itemStyle = new RViewItemManager<>();
-        addStyles(item);
+        if (item != null) {
+            addStyles(item);
+        }
+    }
+
+    void updateData(List<T> data) {
+        if (data == null) {
+            return;
+        }
+        this.data = data;
+        notifyDataSetChanged();
+    }
+
+    void addData(List<T> data) {
+        if (data == null) {
+            return;
+        }
+        this.data.addAll(data);
+        notifyDataSetChanged();
     }
 
     public void setItemListener(ItemListener<T> itemListener) {
         this.itemListener = itemListener;
     }
 
-    private void addStyles(RViewItem<T> item) {
+    public void addStyles(RViewItem<T> item) {
         itemStyle.addStyles(item);
     }
 

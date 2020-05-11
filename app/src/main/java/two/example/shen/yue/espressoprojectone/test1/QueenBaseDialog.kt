@@ -2,8 +2,8 @@ package two.example.shen.yue.espressoprojectone.test1
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.app.AppCompatDialog
 import android.view.*
+import androidx.appcompat.app.AppCompatDialog
 import two.example.shen.yue.espressoprojectone.R
 
 

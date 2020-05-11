@@ -2,10 +2,10 @@ package two.example.shen.yue.espressoprojectone.test2
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.ActivityOptionsCompat
-import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
 import two.example.shen.yue.espressoprojectone.R
 
 /**
@@ -25,9 +25,9 @@ class Test2Activity1 : AppCompatActivity() {
 
         tv1.setOnClickListener {
             val intent = Intent(this, Test2Activity2::class.java)
-            val pairTv1 = android.support.v4.util.Pair<View, String>(tv1, "simple text view1")
-            val pairTv2 = android.support.v4.util.Pair<View, String>(tv2, "simple text view2")
-            val pairTv3 = android.support.v4.util.Pair<View, String>(tv3, "simple text view3")
+            val pairTv1 = androidx.core.util.Pair<View, String>(tv1, "simple text view1")
+            val pairTv2 = androidx.core.util.Pair<View, String>(tv2, "simple text view2")
+            val pairTv3 = androidx.core.util.Pair<View, String>(tv3, "simple text view3")
             val optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this, pairTv1, pairTv2, pairTv3)
             startActivity(intent, optionsCompat.toBundle())
         }

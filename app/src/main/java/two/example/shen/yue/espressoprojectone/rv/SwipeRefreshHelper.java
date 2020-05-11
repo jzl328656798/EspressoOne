@@ -1,6 +1,7 @@
 package two.example.shen.yue.espressoprojectone.rv;
 
-import android.support.v4.widget.SwipeRefreshLayout;
+
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 /**
  * Author: Queen
@@ -31,7 +32,7 @@ public class SwipeRefreshHelper {
         });
     }
 
-    public void setSwipeRefreshListener(SwipeRefreshListener swipeRefreshListener) {
+    void setSwipeRefreshListener(SwipeRefreshListener swipeRefreshListener) {
         this.swipeRefreshListener = swipeRefreshListener;
     }
 }

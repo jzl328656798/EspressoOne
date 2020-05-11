@@ -1,7 +1,7 @@
 package two.example.shen.yue.espressoprojectone.test1
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_test1_1.*
 import two.example.shen.yue.espressoprojectone.R
 

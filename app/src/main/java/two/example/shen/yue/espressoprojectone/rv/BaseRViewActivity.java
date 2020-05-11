@@ -2,15 +2,20 @@ package two.example.shen.yue.espressoprojectone.rv;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import java.util.List;
+
+import two.example.shen.yue.espressoprojectone.R;
 
 /**
  * Author: Queen
  * Date: 2020/5/9 12:56 PM
- * Describe: TODO
+ * Describe: BaseRViewActivity
  */
 public abstract class BaseRViewActivity extends AppCompatActivity implements RViewCreate, SwipeRefreshListener {
 
@@ -19,6 +24,7 @@ public abstract class BaseRViewActivity extends AppCompatActivity implements RVi
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_rv_test1);
         helper = new RViewHelper.Builder(this, this).build();
     }
 
@@ -29,12 +35,12 @@ public abstract class BaseRViewActivity extends AppCompatActivity implements RVi
 
     @Override
     public SwipeRefreshLayout createSwipeRefresh() {
-        return null;
+        return findViewById(R.id.swipe_refresh_layout);
     }
 
     @Override
     public RecyclerView createRecyclerView() {
-        return null;
+        return findViewById(R.id.recycler_view);
     }
 
     @Override
@@ -51,4 +57,9 @@ public abstract class BaseRViewActivity extends AppCompatActivity implements RVi
     public void onRefresh() {
 
     }
+
+    protected void notifyAdapterDataSetChanged(List data) {
+        helper.notifyAdapterDataSetChanged(data);
+    }
+
 }

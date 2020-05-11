@@ -53,15 +53,15 @@ open class ScVideoPlayer : FrameLayout, View.OnClickListener, OnSeekBarChangeLis
     private var mGestureDownVolume = 0
     private var mSeekTimePosition = 0
 
-    constructor(context: Context?) : super(context) {
+    constructor(context: Context) : super(context) {
         initView(context)
     }
 
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         initView(context)
     }
 
-    open fun initView(context: Context?) {
+    open fun initView(context: Context) {
         View.inflate(context, R.layout.sc_video_player, this)
 
         start.setOnClickListener(this)

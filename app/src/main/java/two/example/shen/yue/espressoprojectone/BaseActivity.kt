@@ -1,7 +1,7 @@
 package two.example.shen.yue.espressoprojectone
 
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 
 /**
  * Author: Queen

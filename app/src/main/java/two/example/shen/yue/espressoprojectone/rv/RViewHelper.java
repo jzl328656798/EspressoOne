@@ -1,10 +1,13 @@
 package two.example.shen.yue.espressoprojectone.rv;
 
 import android.content.Context;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import java.util.List;
 
 /**
  * Author: Queen
@@ -54,13 +57,25 @@ public class RViewHelper<T> {
         }
     }
 
+    void notifyAdapterDataSetChanged(List<T> data) {
+        if (currentPageNum == startPageNumber) {
+            adapter.updateData(data);
+        } else {
+            adapter.addData(data);
+        }
+        recyclerView.setAdapter(adapter);
+
+        if (isSupportPaging) {
+            //加载更多 暂未实现
+        }
+    }
 
     public static class Builder<T> {
 
         private RViewCreate<T> create;
         private SwipeRefreshListener listener;
 
-        public Builder(RViewCreate<T> create, SwipeRefreshListener listener) {
+        Builder(RViewCreate<T> create, SwipeRefreshListener listener) {
             this.create = create;
             this.listener = listener;
         }

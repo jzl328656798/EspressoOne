@@ -2,11 +2,11 @@ package two.example.shen.yue.espressoprojectone.test2
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.ActivityOptionsCompat
-import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
 import kotlinx.android.synthetic.main.activity_test2_3.*
 import two.example.shen.yue.espressoprojectone.R
 
@@ -43,9 +43,9 @@ class Test2Activity3 : AppCompatActivity() {
 
     private fun test5() {
         val intent = Intent(this, Test2Activity2::class.java)
-        val pairTv1 = android.support.v4.util.Pair<View, String>(tv_test_sc1, "simple text view1")
-        val pairTv2 = android.support.v4.util.Pair<View, String>(tv_test_sc2, "simple text view2")
-        val pairTv3 = android.support.v4.util.Pair<View, String>(tv_test_sc3, "simple text view3")
+        val pairTv1 = androidx.core.util.Pair<View, String>(tv_test_sc1, "simple text view1")
+        val pairTv2 = androidx.core.util.Pair<View, String>(tv_test_sc2, "simple text view2")
+        val pairTv3 = androidx.core.util.Pair<View, String>(tv_test_sc3, "simple text view3")
         val optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this, pairTv1, pairTv2, pairTv3)
         startActivity(intent, optionsCompat.toBundle())
     }

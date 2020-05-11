@@ -4,10 +4,10 @@ import android.animation.Animator
 import android.animation.AnimatorSet
 import android.animation.ValueAnimator
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.*
 import android.view.animation.OvershootInterpolator
+import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_test4_a.*
 import two.example.shen.yue.espressoprojectone.R
 
