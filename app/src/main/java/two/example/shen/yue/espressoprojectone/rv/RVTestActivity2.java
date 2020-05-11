@@ -44,7 +44,7 @@ public class RVTestActivity2 extends BaseRViewActivity {
     private void initData() {
         list.clear();
         for (int i = 0; i < 50; i++) {
-            list.add(new RVTestBean1(i + ""));
+            list.add(new RVTestBean1(i + "", i % 5));
         }
         notifyAdapterDataSetChanged(list);
     }
