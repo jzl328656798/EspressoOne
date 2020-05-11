@@ -27,6 +27,10 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 repositories {
