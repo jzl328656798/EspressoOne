@@ -10,4 +10,6 @@ class Test13Activity1Bean {
     var name = "queen"
 
     var age = "0"
+
 }
+
