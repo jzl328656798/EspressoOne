@@ -31,7 +31,7 @@ class Test13Fragment2 : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val model = ViewModelProvider(this).get(Test13FragmentViewModel::class.java)
+        val model = ViewModelProvider(requireActivity()).get(Test13FragmentViewModel::class.java)
         model.selected.observe(this, Observer{ bean ->
             Log.i("queen","Test13Fragment2")
             tv_test13_fragment_2.text = bean.name

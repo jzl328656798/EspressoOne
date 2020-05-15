@@ -13,13 +13,12 @@ import android.widget.ListView
  * Describe: ListViewHolder
  */
 @Suppress("UNCHECKED_CAST")
-class ListViewHolder {
+class ListViewHolder(context: Context, layoutId: Int, parent: ViewGroup) {
 
     private val sparseArray by lazy { SparseArray<View>() }
-    private val convertView: View
+    private val convertView: View = LayoutInflater.from(context).inflate(layoutId, parent, false)
 
-    constructor(context: Context, layoutId: Int, parent: ViewGroup) {
-        convertView = LayoutInflater.from(context).inflate(layoutId, parent, false)
+    init {
         convertView.tag = this
     }
 

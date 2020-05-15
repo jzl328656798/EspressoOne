@@ -4,16 +4,42 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <fragment
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="btn1"
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/fragment_test13_1"-->
+    <!--        android:name="two.example.shen.yue.espressoprojectone.test13.fragment.Test13Fragment1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_weight="1" />-->
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/fragment_test13_2"-->
+    <!--        android:name="two.example.shen.yue.espressoprojectone.test13.fragment.Test13Fragment2"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_weight="1" />-->
+
+
+    <FrameLayout
         android:id="@+id/fragment_test13_1"
-        android:name="two.example.shen.yue.espressoprojectone.test13.fragment.Test13Fragment1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <fragment
+    <FrameLayout
         android:id="@+id/fragment_test13_2"
-        android:name="two.example.shen.yue.espressoprojectone.test13.fragment.Test13Fragment2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
