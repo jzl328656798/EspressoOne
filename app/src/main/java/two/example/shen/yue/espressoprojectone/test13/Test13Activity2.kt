@@ -34,7 +34,6 @@ class Test13Activity2 : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test13_2)
 
-
         btn1.setOnClickListener {
 
             btn7()
