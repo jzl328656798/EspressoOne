@@ -7,7 +7,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import two.example.shen.yue.espressoprojectone.test14.Test14Activity2;
+import two.example.shen.yue.espressoprojectone.test15.Test15Activity;
 import two.example.shen.yue.espressoprojectone.test6.Test6Activity2;
 import two.example.shen.yue.espressoprojectone.test6.Test6Activity3;
 import two.example.shen.yue.espressoprojectone.test7.Test7Activity2;
@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
         findViewById(R.id.btn1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Test14Activity2.class));
+                startActivity(new Intent(MainActivity.this, Test15Activity.class));
             }
         });
 
