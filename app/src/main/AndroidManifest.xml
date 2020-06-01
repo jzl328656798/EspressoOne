@@ -66,6 +66,8 @@
         <activity android:name=".test13.Test13Activity4" />
         <activity android:name=".test14.Test14Activity2" />
         <activity android:name=".test15.Test15Activity" />
+        <activity android:name=".test15.Test15Activity3" />
+        <activity android:name=".test15.Test15Activity2" />
     </application>
 
 </manifest>
