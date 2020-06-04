@@ -20,6 +20,8 @@ class Test12Activity1 : BaseActivity() {
         setContentView(R.layout.activity_test12_1)
 
         initView()
+
+        btn.setOnClickListener { list_view.setSelection(26) }
     }
 
     private fun initView() {
