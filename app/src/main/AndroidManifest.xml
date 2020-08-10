@@ -75,6 +75,10 @@
         <activity android:name=".test16.Test16Activity2" />
         <activity android:name=".test17.Test17Activity1" />
         <activity android:name=".test18.Test18Activity1" />
+
+
+        <activity android:name=".study.StudyHomeActivity"/>
+        <activity android:name=".study.activity.WaterfallFLowActivity"/>
     </application>
 
 </manifest>
